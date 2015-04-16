@@ -35,7 +35,8 @@ Template.ionTab.helpers({
   isActive: function () {
     var ionTabCurrent = Session.get('ionTab.current');
 
-    if (this.path && this.path === ionTabCurrent) {
+    if (this.path && this.path === ionTabCurrent ||
+        this.activePath && this.activePath.test(ionTabCurrent)) {
       return 'active';
     }
 
