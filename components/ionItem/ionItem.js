@@ -33,6 +33,14 @@ Template.ionItem.helpers({
       classes.push('item-text-wrap');
     }
 
+    if (this.thumbnailLeft) {
+      classes.push('item-thumbnail-left');
+    }
+
+    if (this.thumbnailRight) {
+      classes.push('item-thumbnail-right');
+    }
+
     return classes.join(' ');
   },
 
